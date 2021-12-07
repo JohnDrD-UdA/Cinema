@@ -1,0 +1,111 @@
+
+body{
+    font-family: 'Advent Pro', sans-serif;
+    background-color:white;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 5px;
+}
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6{
+    font-family:'Courier New', Courier, monospace
+}
+p{
+    line-height: normal;
+}
+section{
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.site-head{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    line-height: 1;
+    font-family:'Courier New', Courier, monospace;
+    display: inline;
+    
+}
+.site-head .sitehead1
+{   display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    height: 30%;
+    text-align: center;
+}
+.center
+{
+    margin: auto;
+}
+.contendorFormulario{
+    background-color: white;
+    width: 50%;
+    justify-content: center;
+    display: block;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0,0, .7);
+    height:max-content;
+}
+.LogIn{
+    align-items: center;
+    font-family: 'Advent Pro', sans-serif;
+}
+.contendorFormulario h2
+    {
+        text-align: center;
+        font-family: 'Advent Pro', sans-serif;
+        font-size: 50px  
+    }
+.blackBar{
+    background-color:lightslategrey;
+    height: 50px;
+    width:auto;
+    padding: 5px;
+}
+.navbar{
+    background-color: darkslategrey;
+    height: 50px;
+    padding: auto;
+}
+.textCenter{
+    text-align: center;
+}
+.input
+{
+    align-items:center ;
+    padding: 5px;
+    display: block;
+    font-size: 40px;
+    text-align: center;
+}
+.contenedorInfo{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.contendor{
+    display: block;
+    align-items: center;
+
+}
+.Buttond{
+    display: block;
+    text-align: center;
+    font-family:'Advent Pro', sans-serif; ;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: rgb(43, 42, 42);
+    background: rgb(255, 255, 255);
+    width: 75%;
+    padding: 12px 20px;
+    font-weight: 400;
+    border: 3px solid;
+    border-color: aqua;
+    border-radius: 20px;
+
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Cinemanet Lo mejor del cine!</title>
+    <link rel="stylesheet" href="../Front/visuals.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;500&display=swap" rel="stylesheet">
+</head>
+<body class="cine">
+    <h1>
+        <div class="Banner"> 
+            <h1>
+                Lo mejor del cine Lo encuentras en Cinemanet
+            </h1>
+        </div>
+    </h1>
+    <nav class="NavBarMain">
+            <h1><a href="../Front/Home.html"> Home </a></h1>
+            <h1><a href="../Front/Home.html"> Cartelera </a></h1>
+            <h1><a href="../Front/Home.html"> Lista de reservas </a></h1>
+            <h1><a href="../Front/Home.html"> Cuenta </a></h1>            
+    </nav>
+    <section class="MainSection">
+        <div class="MainSection Container">
+            <div class="Carrusel">carrusel</div>
+            <div class="Novedades">Pelicaulas Nuevas</div>
+        </div>
+        <div class="SideNews">Noticas</div>
+    </section>
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div >
+                        <h3>Contacto</h3>
+                        <ul>
+                            <li>Desarrollado por: John David Rodriguez David</li>
+                            <li>john.david7800@gmail.com</li>
+                            <li>Envigado, Colombia</li>
+                        </ul>
+                    </div>
+                    <div >
+                        <h3>Cidenet</h3>
+                        <ul>
+                            <li><a href="https://www.cidenet.com.co/">Pagina principal</a></li>
+                            <li><a href="https://www.cidenet.com.co/nosotros/">Nosotros</a></li>
+                            <li><a href="https://www.cidenet.com.co/contacto/">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div >
+                        <h3>Navegacion</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Cartelera</a></li>
+                            <li><a href="#">Ingreso</a></li>
+                        </ul>
+                    </div>
+                    <div ><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Cidenet © 2021</p>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+</body>
+
+</html>
+
+<mat-toolbar color="primary">
+    <span>My APP</span>
+    <span class="spacer"></span>
+    <div>
+        <a mat-button [routerLink]="'/Login'">Login</a>
+        <a mat-button>LogOut</a>
+        <a mat-button [routerLink]="'/Admin'">admin</a>
+    </div>
+</mat-toolbar>
