@@ -19,8 +19,7 @@ p{
     line-height: normal;
 }
 section{
-    padding: 10px;
-    margin-bottom: 40px;
+  padding: 10px;
 }
 .site-head{
     margin-top: 5rem;
@@ -42,7 +41,7 @@ section{
     margin: auto;
 }
 .contendorFormulario{
-    background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
     width: 50%;
     justify-content: center;
     display: block;
@@ -51,6 +50,20 @@ section{
     height:max-content;
     padding: 10px;
 }
+@media (max-width:767px) {
+  .contendorFormulario{
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+    display: block;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0,0, .7);
+    height:max-content;
+    padding: 0;
+}
+
+}
+
 .LogIn{
     align-items: center;
     font-family: 'Advent Pro', sans-serif;
@@ -95,6 +108,8 @@ section{
     padding: 10px;
 
 }
+
+  
 .Buttond{
     display: block;
     text-align: center;
@@ -211,10 +226,27 @@ section{
       padding: 5px;
 
   }
+  @media (max-width:767px) {
+    .row{
+      display: flex;
+      align-items: center;
+      padding: 0;
+      width: 100%;
+
+  }
+  }
   .row>div{
       width: 25%;
       padding: 20px;
       color:rgb(255, 255, 255);
+  }
+  @media (max-width:767px) {
+    .row>div{
+      width: 10%;
+      padding: 20px;
+      color:rgb(255, 255, 255);
+  }
+ 
   }
   .NavBarMain{
     text-align: center;

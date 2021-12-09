@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'FrontAngular';
+  title = 'Cinema Cidenet';
   getUrl()
-  { return "url('assets/Img/BackgroundPhoto.jpg')"
+  { return "url('assets/Img/pexels-tima-miroshnichenko-7991178.jpg')"
   }
 }
 

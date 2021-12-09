@@ -51,10 +51,4 @@ setposter(textvar:string){
 getposter(){
   return this.Formats
   }
-
-
-
-
 }
-
-

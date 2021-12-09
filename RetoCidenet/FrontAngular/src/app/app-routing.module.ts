@@ -7,7 +7,6 @@ const routes: Routes = [
 { path: 'NotFound', loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule) }, 
 { path: 'LogIn', loadChildren: () => import('./pages/log-in/log-in.module').then(m => m.LogInModule) }, 
 { path: 'registre', loadChildren: () => import('./pages/registre/registre.module').then(m => m.RegistreModule) },
-{ path: 'movieicon', loadChildren: () => import('./shares/movie-icon/movie-icon.module').then(m => m.MovieIconModule) },
 { path: 'billboard', loadChildren: () => import('./pages/billboard/billboard.module').then(m => m.BillboardModule) }
 ];
 

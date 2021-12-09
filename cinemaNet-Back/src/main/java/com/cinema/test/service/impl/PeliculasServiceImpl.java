@@ -1,5 +1,7 @@
 package com.cinema.test.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,6 +53,11 @@ public class PeliculasServiceImpl implements PeliculasService {
 	public String deleteMovie(Movie pelicula) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public List<Movie> getAllMovies() {
+		 return peliculasRep.findAll();
 	}
 
 

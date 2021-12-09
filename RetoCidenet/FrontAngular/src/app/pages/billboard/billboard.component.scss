@@ -1,0 +1,52 @@
+.movContainer{
+    white-space: normal;
+    padding: 5px;
+    color: black;
+    align-items: center;
+    width:75%;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.8);;
+
+}
+@media (max-width:767px) {
+    .movContainer{ 
+        white-space: normal;
+        padding: 5px;
+        color: black;
+        align-items: center;
+        height: fit-content;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 5px;
+    }
+    
+}
+.movContent{
+    width: auto;
+    padding: 5px;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.movHead {
+    white-space: normal;
+    padding: 2px;
+    color: black;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.movInfoSection{
+    white-space: normal;
+    padding: 2px;
+    text-align: center;
+    color:black ;
+}

@@ -1,0 +1,31 @@
+<section style="height:max-content;" *ngIf="arrayready">
+  <mat-grid-list [cols]="breakpoint" rowHeight="700px" (window:resize)="onResize($event)" style="width: 100%; height: max-content;"> 
+        <mat-grid-tile
+            *ngFor="let Movie of movies"
+            [colspan]="1"
+            [rowspan]="1"
+            style="padding: 0px; height: max-content; width: 100%;">
+            <mat-card class="movContainer">
+
+              <mat-card-content class="movContent">
+                  <mat-card-title class="movHead">{{Movie.movieName}}</mat-card-title>
+                  <div style="justify-content: center; align-items: center;">
+                      <img style="height: 300px; width: 100%;" src="{{Movie.posterUrl}}">
+                  </div>
+                  <div class="movInfoSection">
+                      <p id="sumary" style="width: auto; text-align: justify; font-size: 10px; white-space: normal;">{{Movie.sinopsis}}</p>
+                      <p id="lenght">{{Movie.length}}</p>
+                      <p id="gendre">{{Movie.gendre}}</p>
+                      <p id="Formats">{{Movie.format}}</p>
+                  </div>
+                  <button>Reservar</button>
+          
+              </mat-card-content>
+          
+              
+              
+          
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+</section>

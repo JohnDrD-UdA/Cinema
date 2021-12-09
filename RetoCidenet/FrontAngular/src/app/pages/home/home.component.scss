@@ -275,8 +275,20 @@ p{
   padding: auto;
   margin: 10px;
   width: 30%;
-  height: 25%;
+  height: fit-content;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 
  }
+ @media (max-width:767px) {
+  .titlecard{
+    padding: auto;
+    margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  
+   }
+  
+}
