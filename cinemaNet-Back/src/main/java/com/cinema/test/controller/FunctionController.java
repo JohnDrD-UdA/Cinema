@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,15 +36,17 @@ public class FunctionController {
 		
 	}
 	
-	@PostMapping("/QueryAllFunctions")
-	public ResponseEntity<ResponseListDTO> queryAllFunctions(@RequestBody Movie movie) 
-		{
+	@GetMapping("/QueryAllFunctions/{movieID}")
+	public List<FunctionM>queryAllFunctions(@PathVariable("movieID") Long movieID)
+	
+		{ Movie movie=new Movie();
+		  movie.setId(movieID);
 			try {
-				return new ResponseEntity<>(new ResponseListDTO(functionServ.findAllByActiuveAndMovie(movie),"Ok"),HttpStatus.OK);
+				return functionServ.findAllByActiuveAndMovie(movie);
 			}
 			catch(Exception e) {
 				System.out.println(e.toString());
-				return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+				return null;
 			}
 		
 		}

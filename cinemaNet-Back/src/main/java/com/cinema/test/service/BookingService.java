@@ -19,6 +19,8 @@ public interface BookingService {
 	public ResponseRegDTO freeChairs(List<Booking> bookings);
 	public ResponseRegDTO freeBooking(Customer customer, FunctionM functionM);
 	
+	public List<Booking> getAllChairs(FunctionM function);
+	
 
 	
 	

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MovieIconComponent } from './movie-icon.component';
+import { BookingDiaglogComponent } from './booking-diaglog.component';
 
-describe('MovieIconComponent', () => {
-  let component: MovieIconComponent;
-  let fixture: ComponentFixture<MovieIconComponent>;
+describe('BookingDiaglogComponent', () => {
+  let component: BookingDiaglogComponent;
+  let fixture: ComponentFixture<BookingDiaglogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MovieIconComponent ]
+      declarations: [ BookingDiaglogComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MovieIconComponent);
+    fixture = TestBed.createComponent(BookingDiaglogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

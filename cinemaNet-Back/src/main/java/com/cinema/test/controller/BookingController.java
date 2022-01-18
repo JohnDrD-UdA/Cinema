@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,19 +28,21 @@ public class BookingController {
 	
 	@PostMapping("/UpdateBooking")
 	public ResponseEntity<ResponseRegDTO> updateBooking(@RequestBody List<Booking> booking) {
-		return new ResponseEntity<>(bookingServ.bookAllChairs(booking),HttpStatus.ACCEPTED);
+		return new ResponseEntity<>(bookingServ.bookAllChairs(booking),HttpStatus.OK);
 		
 	}
 	
-	@PostMapping("/QueryAllAvalible")
+	@GetMapping("/QueryAllAvalible/{id}")
 	
-	public ResponseEntity<ResponseListDTO> getAllAvalibleChairs(@RequestBody FunctionM functionm){
+	public List<Booking> getAllAvalibleChairs(@PathVariable("id") Long id){
+		FunctionM functionm=new FunctionM();
+		functionm.setId(id);
 		try {
-			return new ResponseEntity<>(new ResponseListDTO(bookingServ.getBookingByFunctionAvalible(functionm),"OK"),HttpStatus.OK);
+			return bookingServ.getBookingByFunctionAvalible(functionm);
 		}
 		catch(Exception e) {
 			System.out.println(e.toString());
-			return new ResponseEntity<>(new ResponseListDTO(null,"Error"),HttpStatus.BAD_REQUEST);
+			return null;
 		}
 	}
 	@PostMapping("/ReleaseSeat")

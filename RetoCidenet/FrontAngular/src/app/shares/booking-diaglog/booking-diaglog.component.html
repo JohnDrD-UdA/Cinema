@@ -1,0 +1,37 @@
+
+
+    <mat-card style="height: max-content; width: 98%;">
+        <form name="bookingForm" role="form" [formGroup]="bookingForm">
+            <mat-form-field appearance="fill" style="width: 50%;" >
+                <mat-label>Funciones</mat-label>
+                <mat-select formControlName="Funciones_">
+                    <mat-option *ngFor="let FunctionM of functions" value={{FunctionM.id}}>{{FunctionM.date}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+        <button  mat-button (click)="getBookings()" style="border: rgb(1, 16, 228) solid;">Buscar</button>
+        <div *ngIf="test" style="height:fit-content; width: 100%; padding: 10px;">
+            <div>
+                <mat-card style="text-align: center; padding: 10px; border: solid rgb(1, 16, 228) ;">
+                    Pantalla
+                </mat-card>
+            </div>
+            <mat-grid-list [cols]="cols" rowHeight="50px" style="height: 500px; padding: 10px;">
+                <mat-grid-tile
+                *ngFor="let Booking of bookings"
+                [colspan]="1"
+                [rowspan]="1"
+                style="padding: 0px; margin-bottom: 5px; height: max-content; width: 100%;">
+                <mat-button-toggle  style="height: 75%; width: 50%;" [disabled]="Booking.customer!=null && !this.bookingsMade.includes(Booking)" (click)="selectChair(Booking)" [ngClass]="{'avalible': Booking.customer!=null && !this.bookingsMade.includes(Booking)}">
+                {{Booking.chairLocation}}
+                </mat-button-toggle >
+                </mat-grid-tile>
+            </mat-grid-list>
+            <div style="align-items: center; text-align: center;">
+                <button mat-button color="primary" (click)="bookEveryChair()" style="margin: auto; border: rgb(1, 16, 228) solid;">Enviar</button>
+                <mat-label style="padding: 10px; ">Costo:{{getCost()}}</mat-label>
+            </div>
+        </div>
+    </mat-card>
+
+

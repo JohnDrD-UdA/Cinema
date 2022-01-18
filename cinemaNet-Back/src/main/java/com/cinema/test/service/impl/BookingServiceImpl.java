@@ -126,4 +126,9 @@ public class BookingServiceImpl implements BookingService {
 		}
 		
 	}
+
+	@Override
+	public List<Booking> getAllChairs(FunctionM function) {
+		return bookingRep.getAllByFunctionM(function);
+	}
 }

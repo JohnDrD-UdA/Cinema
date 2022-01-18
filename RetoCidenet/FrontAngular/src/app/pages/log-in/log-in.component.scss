@@ -43,12 +43,16 @@ section{
 .contendorFormulario{
   background-color: rgba(255, 255, 255, 0.9);
     width: 50%;
-    justify-content: center;
+    justify-content:left;
     display: block;
-    align-items: center;
+    align-items: flex-end;
     box-shadow: 0 0 15px rgba(0, 0,0, .7);
     height:max-content;
     padding: 10px;
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 25px;
 }
 @media (max-width:767px) {
   .contendorFormulario{
@@ -60,6 +64,9 @@ section{
     box-shadow: 0 0 15px rgba(0, 0,0, .7);
     height:max-content;
     padding: 0;
+    margin-left: 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 }
@@ -95,16 +102,29 @@ section{
     display: block;
     font-size: 15px;
     text-align: center;
-    width: 50%;
+    width: 70%;
 }
+@media (max-width:767px) {
+  .input
+{
+    align-items:center ;
+    padding: 5px;
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+}
+
 .contenedorInfo{
     display: inline-block;
     text-align: center;
     width: 100%;
 }
 .contendor{
-    display: block;
-    align-items: center;
+    display:flexbox;
+    align-items:flex-end;
     padding: 10px;
 
 }
@@ -137,7 +157,7 @@ section{
 }
 .footer-clean {
     padding:50px 0;
-    background-color:rgb(44, 44, 58);
+    background-color:rgba(1, 1, 41, 0.486);
     color:#4b4c4d;
   }
   
@@ -293,13 +313,5 @@ section{
     display: block;
     height: 500px;
   }
-  .Carrusel{
-    height: 75%;
-    background-color: blue;
-  }
 
-  .Novedades{
-    height: 25%;
-    background-color:  red;
-  }
  

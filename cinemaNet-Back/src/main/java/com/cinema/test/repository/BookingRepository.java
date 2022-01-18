@@ -17,4 +17,10 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
 	
 	@Query("select booking from Booking booking where booking.customer=:customer_ and booking.function=:functionM ")
 	List<Booking> findAllByCustomerAndFunction(@Param("customer_") Customer customer, @Param("functionM") FunctionM function);
+	
+	@Query("select booking from Booking booking where booking.function= :function ")
+	
+	List<Booking> getAllByFunctionM(@Param("function") FunctionM function);
+	
+
 }
