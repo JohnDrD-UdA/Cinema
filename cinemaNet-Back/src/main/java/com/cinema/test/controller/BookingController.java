@@ -1,5 +1,6 @@
 package com.cinema.test.controller;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.cinema.test.DTO.ResponseListDTO;
 import com.cinema.test.DTO.ResponseRegDTO;
 import com.cinema.test.model.Booking;
 import com.cinema.test.model.Customer;
@@ -41,8 +40,7 @@ public class BookingController {
 			return bookingServ.getBookingByFunctionAvalible(functionm);
 		}
 		catch(Exception e) {
-			System.out.println(e.toString());
-			return null;
+			return Collections.emptyList();
 		}
 	}
 	@PostMapping("/ReleaseSeat")
@@ -52,7 +50,6 @@ public class BookingController {
 		}
 			
 		catch(Exception e) {
-			System.out.println(e.toString());
 			return new ResponseEntity<>(new ResponseRegDTO("Error"),HttpStatus.BAD_REQUEST );
 			}
 	}
@@ -66,7 +63,6 @@ public class BookingController {
 			}
 				
 			catch(Exception e) {
-				System.out.println(e.toString());
 				return new ResponseEntity<>(new ResponseRegDTO("Error"),HttpStatus.BAD_REQUEST );
 				}
 	}

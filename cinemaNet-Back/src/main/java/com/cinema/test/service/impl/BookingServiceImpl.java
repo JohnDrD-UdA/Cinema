@@ -1,5 +1,6 @@
 package com.cinema.test.service.impl;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class BookingServiceImpl implements BookingService {
 	
 	@Autowired
 	BookingRepository bookingRep;
+	ResponseRegDTO errorRes=new ResponseRegDTO("error");
 
 	@Override
 	public ResponseRegDTO createbooking(Booking booking) {
@@ -25,14 +27,14 @@ public class BookingServiceImpl implements BookingService {
 			return new ResponseRegDTO("OK");
 		}
 		catch(Exception e) {
-			return new ResponseRegDTO("Error");
+			return this.errorRes;
 		}
 	}
 
 	@Override
 	public List<Booking> getBookingByCustomer(Customer customer) {
 		
-		return null;
+		return Collections.emptyList();
 	}
 
 	@Override
@@ -42,7 +44,7 @@ public class BookingServiceImpl implements BookingService {
 			return new ResponseRegDTO("OK");
 		}
 		catch(Exception e) {
-			return new ResponseRegDTO("Error");
+			return this.errorRes;
 		}
 	}
 	
@@ -65,7 +67,6 @@ public class BookingServiceImpl implements BookingService {
 			return auxiliarResponse;
 			}
 			catch(Exception e) {
-				System.out.println(e.toString());
 				auxiliarResponse.setStatus("Error");
 				return auxiliarResponse;
 			}
@@ -80,8 +81,9 @@ public class BookingServiceImpl implements BookingService {
 	
 	@Override
 	public ResponseRegDTO freeChairs(List<Booking> bookings) 
-		{		{ 
-			Booking auxiliarBooking,auxiliarBooking2;
+		{		
+			Booking auxiliarBooking;
+			Booking auxiliarBooking2;
 			ResponseRegDTO auxiliarResponse= new ResponseRegDTO("");
 			try {
 			
@@ -90,7 +92,7 @@ public class BookingServiceImpl implements BookingService {
 				auxiliarBooking=bookingRep.getById(bookings.get(i).getId());
 				auxiliarBooking2=bookings.get(i);
 				
-				if(auxiliarBooking.getCustomer().getId()==auxiliarBooking2.getCustomer().getId()) {
+				if(auxiliarBooking.getCustomer().getId().equals(auxiliarBooking2.getCustomer().getId())) {
 					
 					auxiliarBooking2.setCustomer(null);
 					auxiliarResponse=updatebooking(auxiliarBooking2);	
@@ -105,7 +107,6 @@ public class BookingServiceImpl implements BookingService {
 				return auxiliarResponse;
 			}
 		
-		}
 		
 		}
 	
@@ -121,8 +122,7 @@ public class BookingServiceImpl implements BookingService {
 		return new ResponseRegDTO("OK");
 		}
 		catch(Exception e) {
-			System.out.println(e.toString());
-			return new ResponseRegDTO("Error");
+			return this.errorRes;
 		}
 		
 	}

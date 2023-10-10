@@ -49,14 +49,11 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public String deleteUser(String user) {
-		// TODO Auto-generated method stub
-		
 		return null;
 	}
 
 	@Override
 	public String deleteUser(UserModel user) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	

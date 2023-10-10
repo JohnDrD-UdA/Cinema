@@ -45,13 +45,11 @@ public class PeliculasServiceImpl implements PeliculasService {
 
 	@Override
 	public String deleteMovie(String user) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public String deleteMovie(Movie pelicula) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

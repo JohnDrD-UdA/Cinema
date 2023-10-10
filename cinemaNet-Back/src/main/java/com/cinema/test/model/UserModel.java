@@ -67,8 +67,7 @@ public class UserModel {
 	public boolean checkUserName() {
 		int check1=this.getUserName().indexOf('@');
 		int check2=this.getUserName().indexOf(".com");
-		if(check1==-1 || check1==0) {return false;}
-		if(check2==check1+1 || check2==-1) {return false;}
+		if(check1==-1 || check1==0 || check2==check1+1 || check2==-1) {return false;}
 		return true;
 		
 	}

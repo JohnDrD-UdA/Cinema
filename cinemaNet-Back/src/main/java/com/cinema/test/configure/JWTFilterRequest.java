@@ -54,7 +54,6 @@ public class JWTFilterRequest extends OncePerRequestFilter{
 			}
 			filterChain.doFilter(request, response);
 		}catch(Exception e) {
-			System.out.println("Error de autenticacion: "+e);
 			response.setStatus(401);
 		}
 		

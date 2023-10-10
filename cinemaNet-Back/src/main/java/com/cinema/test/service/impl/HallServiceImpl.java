@@ -20,7 +20,6 @@ public class HallServiceImpl implements HallService {
 			
 		}
 		catch(Exception e) {
-			System.out.println(e.toString());
 			return new ResponseRegDTO("Error");
 		}
 	}
@@ -32,7 +31,6 @@ public class HallServiceImpl implements HallService {
 		
 	}
 	catch(Exception e) {
-		System.out.println(e.toString());
 		return new ResponseRegDTO("Error");
 	}
 }

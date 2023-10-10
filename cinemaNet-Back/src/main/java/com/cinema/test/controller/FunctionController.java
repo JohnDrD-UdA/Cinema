@@ -1,5 +1,6 @@
 package com.cinema.test.controller;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cinema.test.DTO.ResponseListDTO;
 import com.cinema.test.DTO.ResponseRegDTO;
 import com.cinema.test.model.FunctionM;
 import com.cinema.test.model.Movie;
@@ -30,8 +30,7 @@ public class FunctionController {
 		try {
 		return new ResponseEntity<>( functionServ.createFunction(functionm),HttpStatus.OK );}
 		catch(Exception e) {
-			System.out.println(e.toString());
-			return new ResponseEntity<>( null,HttpStatus.BAD_REQUEST );
+			return new ResponseEntity<>( HttpStatus.BAD_REQUEST );
 		}
 		
 	}
@@ -45,8 +44,7 @@ public class FunctionController {
 				return functionServ.findAllByActiuveAndMovie(movie);
 			}
 			catch(Exception e) {
-				System.out.println(e.toString());
-				return null;
+				return Collections.emptyList();
 			}
 		
 		}

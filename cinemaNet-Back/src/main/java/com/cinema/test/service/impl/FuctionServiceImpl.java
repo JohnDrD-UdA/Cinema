@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.cinema.test.DTO.ResponseRegDTO;
 import com.cinema.test.model.Booking;
@@ -51,7 +50,6 @@ public class FuctionServiceImpl implements FunctionService {
 			return new ResponseRegDTO("OK");
 		}
 		catch(Exception e) {
-			System.out.println(e.toString());
 			return new ResponseRegDTO("Error");
 			
 		}
@@ -69,7 +67,6 @@ public class FuctionServiceImpl implements FunctionService {
 			return new ResponseRegDTO("OK");
 		}
 		catch(Exception e) {
-			System.out.println(e.toString());
 			return new ResponseRegDTO("Error");
 			
 		}
@@ -94,7 +91,6 @@ public class FuctionServiceImpl implements FunctionService {
 				booking.setFunction(function);
 				booking.setStatus("Avilable");
 				bookingList.add(booking);
-				System.out.println("Silla "+ chairLocation);
 			 }
 		 }
 		 bookingRep.saveAll(bookingList);

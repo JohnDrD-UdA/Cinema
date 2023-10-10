@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cinema.test.DTO.ResponseAuthDTO;
 import com.cinema.test.DTO.ResponseRegDTO;
 import com.cinema.test.model.Customer;
 import com.cinema.test.service.CustomerService;
